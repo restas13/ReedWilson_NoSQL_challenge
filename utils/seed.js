@@ -20,7 +20,7 @@ connection.once('open', async () => {
     const users = [];
 
     for (let i = 0; i < 20; i++) {
-        const thought = getRandomThought();
+        const thought = getRandomThought(2);
 
         const name = getRandomName();
 

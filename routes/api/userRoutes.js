@@ -7,7 +7,7 @@ const {
     updateUser,
 } = require('../../controllers/userController');
 
-router.route('/').get(getCourses).post(createCourse);
+router.route('/').get(getUsers).post(createUser);
 
 router
     .route('/:courseId')

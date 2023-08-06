@@ -20,7 +20,7 @@ const thoughts = [
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const getRandomName = () => {
-    `${getRandomArrItem(usernames)}`
+    return `${getRandomArrItem(usernames)}`
 };
 
 const getRandomThought = (int) => {
