@@ -40,12 +40,6 @@ thoughtSchema.virtual('reactionCount').get(function () {
 });
 
 
-function formatDate(date) {
-    const today = new Date(date);
-
-    return today.toDateString();
-};
-
 const Thought = model('thought', thoughtSchema);
 
 module.exports = Thought;
