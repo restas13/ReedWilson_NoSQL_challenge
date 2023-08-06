@@ -15,7 +15,7 @@ const userSchema = new Schema(
             unique: true,
             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
         },
-        thoughts: [thoughts],
+        //thoughts: [thoughts],
         friends: [
             {
                 type: Schema.Types.ObjectId,
@@ -30,13 +30,13 @@ const userSchema = new Schema(
         id: false,
     }
 );
-
+/*
 userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 }),set( function(v) {
     this.set(v);
 });
-
+*/
 const User = model('user', userSchema);
 
 module.exports = User;

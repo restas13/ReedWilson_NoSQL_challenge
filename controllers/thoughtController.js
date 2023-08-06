@@ -27,9 +27,9 @@ module.exports = {
         try {
             const thought = await Thought.findOne({ _id: req.params.thoughtId }).select('-__v');
 
-            if(!thought) {
-                return res.status(404).res.json({ message: 'Sorry, there are no thoughts with that ID'});
-            } 
+            if (!thought) {
+                return res.status(404).res.json({ message: 'Sorry, there are no thoughts with that ID' });
+            }
 
             res.json({ thought });
 
@@ -50,7 +50,7 @@ module.exports = {
     async deleteThought(req, res) {
         try {
             const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId });
-            
+
             if (!student) {
                 return res.status(404).json({ message: 'There are no thoughts with that Id' });
             }
